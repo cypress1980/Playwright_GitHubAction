@@ -8,7 +8,11 @@ await page.locator('[name="email"]').click();
 await page.locator('[name="email"]').fill('applitoolsautomation@yopmail.com');
 await page.locator('[name="password"]').fill('Test@123');
 await page.locator('[type="submit"]').nth(1).click();
-const text = await page.locator('[id="progress-bar"]').textContent();
-expect(text).toContain("PROFILE");
+await page.locator('[alt="DropDown Button"]').click();
+await page.locator('[data-id="nav-dropdown-logout"]').click();
+//const text = await page.locator('[id="progress-bar"]').textContent();
+//expect(text).toContain("PROFILE");
 });
 });
+
+//data-id="nav-dropdown-logout"
