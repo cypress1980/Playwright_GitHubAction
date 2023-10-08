@@ -10,9 +10,5 @@ await page.locator('[name="password"]').fill('Test@123');
 await page.locator('[type="submit"]').nth(1).click();
 await page.locator('[alt="DropDown Button"]').click();
 await page.locator('[data-id="nav-dropdown-logout"]').click();
-//const text = await page.locator('[id="progress-bar"]').textContent();
-//expect(text).toContain("PROFILE");
 });
 });
-
-//data-id="nav-dropdown-logout"
