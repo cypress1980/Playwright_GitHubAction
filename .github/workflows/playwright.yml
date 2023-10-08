@@ -2,8 +2,7 @@ name: Playwright Tests
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+
 jobs:
   test:
     timeout-minutes: 60
@@ -13,11 +12,11 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 18
-    - name: Install dependencies
+    - name: Install the dependencies
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
+    - name: Run all Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
