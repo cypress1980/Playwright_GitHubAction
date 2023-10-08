@@ -1,7 +1,6 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 test.describe("UI Test case with Playwright", () => {
-const baseurl = "https://reqres.in/api";
 test("UI Test case", async ({ page }) => {
 await page.goto('https://talent500.co/auth/signin')
 await page.locator('[name="email"]').click();
